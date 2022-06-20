@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 20 16:13:38 2022
+# Make data base, printed on Mon Jun 20 16:27:01 2022
 
 # Variables
 
@@ -197,7 +197,7 @@ OS = Windows_NT
 # environment
 MSYSTEM_PREFIX = C:/Program Files/Git/mingw64
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := myprog
 # environment
 DISPLAY = needs-to-be-defined
 # default
@@ -265,7 +265,7 @@ TERM_PROGRAM_VERSION = 3.5.2
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
 # variable set hash-table stats:
-# Load=126/1024=12%, Rehash=0, Collisions=14/152=9%
+# Load=126/1024=12%, Rehash=0, Collisions=14/153=9%
 
 # Pattern-specific Variable Values
 
@@ -273,15 +273,46 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/onlyf/Filesys, mtime 1655766817): 9 files, no impossibilities.
+# . (key c:/Users/onlyf/Filesys, mtime 1655767583): 11 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+# Not a target:
+sdisk.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+filesys.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 14):
+	rm *.o
+
+# Not a target:
+shell.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+table.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -296,27 +327,75 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+table.o: table.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 10):
+	g++ -c table.cpp
+
+# Not a target:
+main.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+sdisk.o: sdisk.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 4):
+	g++ -c sdisk.cpp
+
+shell.o: shell.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 8):
+	g++ -c shell.cpp
+
+main.o: main.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 12):
+	g++ -c main.cpp
+
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-20 16:13:27
+#  Last modified 2022-06-20 16:16:14
 #  File has been updated.
 #  Successfully updated.
 
+filesys.o: filesys.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 6):
+	g++ -c filesys.cpp
+
+myprog: sdisk.o filesys.o shell.o table.o main.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 2):
+	g++ -o myprog sdisk.o filesys.o shell.o table.o main.o
+
 # files hash-table stats:
-# Load=4/1024=0%, Rehash=0, Collisions=0/14=0%
+# Load=16/1024=2%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 12 / storage = 90 B / avg = 7 B
-# current buf: size = 8162 B / used = 90 B / count = 12 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 173 B / avg = 7 B
+# current buf: size = 8162 B / used = 173 B / count = 22 / avg = 7 B
 
-# strcache performance: lookups = 16 / hit rate = 25%
+# strcache performance: lookups = 42 / hit rate = 47%
 # hash-table stats:
-# Load=12/8192=0%, Rehash=0, Collisions=0/16=0%
-# Finished Make data base on Mon Jun 20 16:13:38 2022
+# Load=22/8192=0%, Rehash=0, Collisions=0/42=0%
+# Finished Make data base on Mon Jun 20 16:27:01 2022
 
  

@@ -1,5 +1,9 @@
+make.exe --dry-run --keep-going --print-directory
 make: Entering directory 'c:/Users/onlyf/Filesys'
+ 
+make: *** No rule to make target 'shell.cpp', needed by 'shell.o'.
+make: *** No rule to make target 'table.cpp', needed by 'table.o'.
+make: *** No rule to make target 'main.cpp', needed by 'main.o'.
+
 make: Leaving directory 'c:/Users/onlyf/Filesys'
  
-make: *** No targets.  Stop.
-
